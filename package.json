@@ -1,0 +1,23 @@
+{
+  "name": "ip-address-tracker",
+  "description": "![Design preview for the IP address tracker coding challenge](./design/desktop-preview.jpg)",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel index.html",
+    "scss": "parcel watch style/style.scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pauladeville/ip-adress-tracker.git"
+  },
+  "author": "Pauline Desmarets",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pauladeville/ip-adress-tracker/issues"
+  },
+  "homepage": "https://github.com/pauladeville/ip-adress-tracker#readme",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
+}
