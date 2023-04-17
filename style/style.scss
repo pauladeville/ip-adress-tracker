@@ -5,6 +5,8 @@ $very-dark-gray: hsl(0, 0%, 17%);
 $dark-gray: hsl(0, 0%, 59%);
 $white: #fff;
 
+$shadow: 0px 0px 15px -3px rgba(0, 0, 0, 0.3);
+
 //MEDIA QUERIES
 @mixin mini {
   @media screen and (max-width: 350px) {
@@ -14,6 +16,35 @@ $white: #fff;
 @mixin desktop {
   @media screen and (min-width: 900px) {
     @content;
+  }
+}
+
+//ANIMATION
+@keyframes spin {
+  0%,
+  100% {
+    box-shadow: 0em -2.6em 0em 0em #ffffff, 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2), 2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.5), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7);
+  }
+  12.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.7), 1.8em -1.8em 0 0em #ffffff, 2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5);
+  }
+  25% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.5), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.7), 2.5em 0em 0 0em #ffffff, 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  37.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5), 2.5em 0em 0 0em rgba(255, 255, 255, 0.7), 1.75em 1.75em 0 0em #ffffff, 0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2), 2.5em 0em 0 0em rgba(255, 255, 255, 0.5), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.7), 0em 2.5em 0 0em #ffffff, -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  62.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2), 2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.5), 0em 2.5em 0 0em rgba(255, 255, 255, 0.7), -1.8em 1.8em 0 0em #ffffff, -2.6em 0em 0 0em rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  75% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2), 2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.5), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.7), -2.6em 0em 0 0em #ffffff, -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  87.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2), 2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.5), -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
 }
 
@@ -50,27 +81,45 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: $shadow;
+  border-radius: 15px;
 }
 input {
   padding: 20px 25px;
-  border: none;
+  border: $white 2px solid;
   border-radius: 15px 0 0 15px;
   text-align: left;
   width: 100%;
+  transition: all 200ms ease-in-out;
+  &:focus-visible {
+    outline: none;
+    border: $very-dark-gray 2px solid;
+  }
 }
 #submit {
-  background-color: $very-dark-gray;
   border-radius: 0 15px 15px 0;
   padding: 20px 25px;
+  background-color: $very-dark-gray;
+  border: $very-dark-gray 2px solid;
+  img {
+    transform: scale(1);
+    transition: all 300ms ease-in-out;
+  }
+  &:hover {
+    img {
+      transform: scale(1.5);
+    }
+  }
 }
 
 //RESULTS
 section {
-  padding: 30px;
+  padding: 0 30px;
 }
 .result {
-  position: relative;
-  top: -100px;
+  z-index: 9;
+  position: absolute;
+  top: 22vh;
   left: 50%;
   transform: translateX(-50%);
   width: 300px;
@@ -82,6 +131,7 @@ section {
   align-items: center;
   height: 40vh;
   padding: 15px;
+  box-shadow: $shadow;
   &__item {
     h2 {
       text-transform: uppercase;
@@ -98,6 +148,28 @@ section {
   }
 }
 
+//MAP
+#map {
+  height: 80vh;
+  z-index: 1;
+}
+
+//SPINNER
+#spinner {
+  display: block;
+  z-index: 9;
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  margin: auto;
+  border-radius: 50%;
+  position: relative;
+  top: 40vh;
+  text-indent: -9999em;
+  animation: spin 1.1s infinite ease;
+  transform: translateZ(0);
+}
+
 //SMALL SCREENS
 @include mini {
   .form {
@@ -110,6 +182,7 @@ section {
     border-radius: 15px 15px 0 0;
   }
   #submit {
+    cursor: pointer;
     border-radius: 0 0 15px 15px;
     padding: 20px;
     width: 100%;
@@ -124,13 +197,17 @@ section {
     position: static;
     transform: translateX(0);
     width: 100%;
+    height: 50vh;
     background-color: $white;
     border-radius: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding: 25px;
+    padding: 50px 25px;
+  }
+  #map {
+    display: none;
   }
 }
 
