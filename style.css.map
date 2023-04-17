@@ -1,0 +1,1 @@
+{"mappings":"AAAA;;;;;AAIA","sources":["style/style.scss"],"sourcesContent":[".attribution {\n  font-size: 11px;\n  text-align: center;\n}\n.attribution a {\n  color: red;\n}"],"names":[],"version":3,"file":"style.css.map","sourceRoot":"../"}
