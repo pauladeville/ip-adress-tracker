@@ -14,7 +14,7 @@ $shadow: 0px 0px 15px -3px rgba(0, 0, 0, 0.3);
   }
 }
 @mixin desktop {
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 1050px) {
     @content;
   }
 }
@@ -93,7 +93,10 @@ input {
   transition: all 200ms ease-in-out;
   &:focus-visible {
     outline: none;
-    border: $very-dark-gray 2px solid;
+    border: $white 2px solid;
+  }
+  &.error {
+    border-color: red;
   }
 }
 #submit {
@@ -109,6 +112,19 @@ input {
     img {
       transform: scale(1.5);
     }
+  }
+}
+@include desktop {
+  header {
+    background-image: url(../images/pattern-bg-desktop.png);
+    height: 300px;
+  }
+  h1 {
+    font-size: 35px;
+  }
+  .form {
+    width: 40%;
+    margin: 25px auto;
   }
 }
 
@@ -129,8 +145,7 @@ section {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 40vh;
-  padding: 15px;
+  padding: 20px;
   box-shadow: $shadow;
   &__item {
     h2 {
@@ -138,19 +153,54 @@ section {
       color: $dark-gray;
       font-weight: 700;
       font-size: 12px;
-      margin: 5px 0 5px 0;
+      margin: 10px 0 10px 0;
     }
     p {
       font-weight: 500;
       font-size: 22px;
-      margin: 5px 0 5px 0;
+      margin: 10px 0 10px 0;
+    }
+  }
+}
+@include desktop {
+  .result {
+    flex-direction: row;
+    top: 200px;
+    height: 200px;
+    justify-content: center;
+    align-items: start;
+    width: 80%;
+    padding: 40px;
+  }
+  .result__item {
+    position: relative;
+    padding: 0 40px;
+    height: 100%;
+    &:after{
+      position: absolute;
+      top: 30px;
+      left: -10px;
+      content: "";
+      display: block;
+      width: 1px;
+      height: 50px;
+      background-color: $dark-gray;
+    }
+    &:first-child{
+      &:after{
+        display: none;
+      }
+    }
+    h2,
+    p {
+      text-align: left;
     }
   }
 }
 
 //MAP
 #map {
-  height: 80vh;
+  height: 100vh;
   z-index: 1;
 }
 
