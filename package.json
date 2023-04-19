@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel index.html",
-    "scss": "parcel watch style/style.scss"
+    "scss": "parcel watch style/style.scss",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,13 @@
   "devDependencies": {
     "@babel/preset-env": "^7.21.4",
     "@parcel/transformer-sass": "^2.8.3",
-    "parcel": "^2.8.3"
+    "parcel": "^2.8.3",
+    "process": "^0.11.10"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
   },
   "dependencies": {
     "firebase": "^9.20.0"

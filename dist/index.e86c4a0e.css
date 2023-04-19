@@ -162,14 +162,18 @@ section {
     width: 80%;
     flex-direction: row;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     padding: 40px;
     top: 200px;
   }
 
   .result__item {
     height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
     padding: 0 40px;
+    display: flex;
     position: relative;
   }
 

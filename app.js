@@ -1,6 +1,5 @@
 //FIREBASE CONFIG
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 const firebaseConfig = {
   apiKey: "AIzaSyDRpWKRNqOpvvCcCvK7_45wTO2ITxDXhmg",
   authDomain: "ip-tracker-1bb45.firebaseapp.com",
@@ -11,9 +10,8 @@ const firebaseConfig = {
   measurementId: "G-QC7D90MG5N",
 };
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 
-//VARIABLES
+//VARIABLESgit a
 let map;
 const tileLayer = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 19,
@@ -31,6 +29,7 @@ fetch("https://api.ipify.org/?format=json")
   })
   .catch((error) => {
     console.error(error);
+    getCoordinates('ladiesofcode.com');
   });
 
 //GET LATITUDE AND LONGITUDE

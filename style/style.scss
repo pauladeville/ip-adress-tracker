@@ -168,7 +168,7 @@ section {
     top: 200px;
     height: 200px;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     width: 80%;
     padding: 40px;
   }
@@ -176,7 +176,11 @@ section {
     position: relative;
     padding: 0 40px;
     height: 100%;
-    &:after{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    &:after {
       position: absolute;
       top: 30px;
       left: -10px;
@@ -186,8 +190,8 @@ section {
       height: 50px;
       background-color: $dark-gray;
     }
-    &:first-child{
-      &:after{
+    &:first-child {
+      &:after {
         display: none;
       }
     }
