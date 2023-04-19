@@ -29,7 +29,7 @@ fetch("https://api.ipify.org/?format=json")
   })
   .catch((error) => {
     console.error(error);
-    getCoordinates('ladiesofcode.com');
+    alert("Cette app n'est pas compatible avec les extensions qui bloquent les traqueurs publicitaires. Vous devrez les désactivez pour pouvoir tester l'IP tracker");
   });
 
 //GET LATITUDE AND LONGITUDE
